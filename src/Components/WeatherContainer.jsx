@@ -1,10 +1,14 @@
 import React from 'react';
+import WeatherForm from './WeatherForm';
+
 import '../Styles/WeatherApp.scss';
 
-function WeatherContainer () {
+function WeatherContainer ({ getWeather }) {
     return (
         <div className='WeatherContentWrapper'>
-            <div className='WeatherContent'></div>
+            <div className='WeatherContent'>
+                <WeatherForm getWeather={ getWeather } />
+            </div>
         </div>
     )
 }
