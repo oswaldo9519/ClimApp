@@ -6,7 +6,7 @@ function Routes () {
     return (
         <div>
             <Switch>
-                <Route exact path='/quienessomos' component={} />
+                {/*<Route exact path='/quienessomos' component={} />*/}
                 <Route exact path='/weatherhome' component={WeatherApp} />
             </Switch>
         </div>
