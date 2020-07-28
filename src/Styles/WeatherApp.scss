@@ -22,8 +22,9 @@ BODY {
         width: 100%;
         position: fixed;
         font-family: sans-serif;
-        background: $electric_blue;
+        background: $white_color;
         align-items: center;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
         .headerContent {
             display: flex;
             justify-content: center;
@@ -32,13 +33,15 @@ BODY {
             position: relative;
             .titleHeader {
                 font-weight: bold;
-                font-size: 1rem;
-                color: $white_color; 
+                font-size: 3rem;
+                color: $electric_blue; 
             }
             .iconHeader {
                 position: absolute;
                 right: 45%;
-                font-size: 1.5rem;
+                font-size: 4rem;
+                color: $electric_blue;
+                border-radius: 100%;
             }
         }
     }
@@ -67,7 +70,7 @@ BODY {
                 box-shadow: 3px 5px 11px rgba(0, 0, 0, 0.50);
                 .formulario {
                     height: 50%;
-                    width: 50%;
+                    width: 60%;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -80,7 +83,7 @@ BODY {
                         margin-bottom: 20px;
                         position: relative;
                         .titleWeatherApp {
-                            font-size: 1.5rem;
+                            font-size: 5rem;
                             font-family: sans-serif;
                             font-weight: bold;
                         }
@@ -93,8 +96,9 @@ BODY {
                         }
                     }
                     .inputForm {
+                        font-size: 40px;
                         margin-bottom: 10px;
-                        width: 80%;
+                        width: 50%;
                         margin-right: 1.5%;
                         padding-left: 10px;
                         border: 1px solid $border_gray;
@@ -102,16 +106,17 @@ BODY {
                         outline: 0;
                     }
                     .btnForm {
+                        margin-top: 25px;
                         color: $white_color;
                         background: $blue_sky;
-                        width: 150px;
+                        width: 350px;
                         height: 80px;
                         display: flex;
                         justify-content: center;
                         align-items: center;
                         font-weight: bold;
                         font-family: sans-serif;
-                        font-size: 0.8rem;
+                        font-size: 30px;
                         border-radius: 6px;
                         cursor: pointer;
                         border: none;
@@ -122,12 +127,20 @@ BODY {
                     }
                 }
                 .general_info {
+                    width: 500px;
+                    height: 200px;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                    font-size: 35px;
                     position: absolute;
                     bottom: 10%;
                     margin: 5px;
                     background: white;
                     padding: 15px;
                     border-radius: 8px;
+                    font-family: sans-serif;
                     div {
                         div {
                             .margin-r5 {
@@ -149,29 +162,30 @@ BODY {
         .headerWrapper {
             .headerContent {
                 .titleHeader {
-                    font-size: 28px;
+                    font-size: 18px;
                 }
                 .iconHeader {
                     right: 5%;
-                    font-size: 40px;
+                    font-size: 25px;
                 }
             }
         }
         .WeatherContentWrapper {
             .WeatherContent {
                 .formWrapper {
-                    height: 25%;
+                    height: 50%;
                     .formulario {
+                        width: 100%;
                         .formTitle {
                             .titleWeatherApp {
-                                font-size: 30px;
+                                font-size: 25px;
                                 margin-top: 10px;
                                 margin-bottom: 10px;
                             }
                             svg {
-                                
-                                bottom: 80%;
-                                left: -40%;
+                                font-size: 30px;
+                                top: -90%;
+                                left: 2%;
                             }
                         }
                         .inputForm {
@@ -195,38 +209,39 @@ BODY {
     }
   }
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .contentWrapper {
         .headerWrapper {
             .headerContent {
                 .titleHeader {
-                    font-size: 23px;
+                    font-size: 18px;
                 }
                 .iconHeader {
                     right: 5%;
-                    font-size: 40px;
+                    font-size: 25px;
                 }
             }
         }
         .WeatherContentWrapper {
             .WeatherContent {
                 .formWrapper {
-                    height: 20%;
-                    .fomulario {
+                    height: 35%;
+                    .formulario {
+                        width: 100%;
                         .formTitle {
                             .titleWeatherApp {
-                                font-size: 20px;
+                                font-size: 22px;
                                 margin-top: 10px;
                                 margin-bottom: -10px;
                             }
                             svg {
                                 font-size: 30px;
-                                bottom: 0%;
+                                bottom: 200%;
                                 left: 2%;
                             }
                         }
                         .inputForm {
-                            width: 60%;
+                            width: 50%;
                             font-size: 12px;
                         }
                         .btnForm {
@@ -244,9 +259,9 @@ BODY {
             }
         }
     }
-  }
+}
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
     .contentWrapper {
         .headerWrapper {
             .headerContent {
@@ -262,18 +277,19 @@ BODY {
         .WeatherContentWrapper {
             .WeatherContent {
                 .formWrapper {
-                    height: 25%;
+                    height: 36%;
                     .formulario {
+                        width: 100%;
                         .formTitle {
                             .titleWeatherApp {
-                                font-size: 12px;
+                                font-size: 16px;
                                 margin-top: 10px;
                                 margin-bottom: -10px;
                             }
                             svg {
-                                font-size: 15px;
-                                bottom: 50%;
-                                left: 2%;
+                                font-size: 20px;
+                                bottom: 90%;
+                                left: 3%;
                             }
                         }
                         .inputForm {
@@ -281,8 +297,9 @@ BODY {
                             font-size: 12px;
                         }
                         .btnForm {
-                            width: 100px;
-                            font-size: 10px;
+                            padding: 5px;
+                            width: 105px;
+                            font-size: 12px;
                         }
                     }
                     .general_info {
@@ -297,7 +314,7 @@ BODY {
     }
   }
 
-  @media (max-width: 410px) {
+  @media (max-width: 450px) {
     .contentWrapper {
         .headerWrapper {
             .headerContent {
@@ -313,17 +330,18 @@ BODY {
         .WeatherContentWrapper {
             .WeatherContent {
                 .formWrapper {
-                    height: 23%;
+                    height: 30%;
                     .formulario {
+                        width: 100%;
                         .formTitle {
                             .titleWeatherApp {
-                                font-size: 10px;
+                                font-size: 12px;
                                 margin-top: 10px;
                                 margin-bottom: -10px;
                             }
                             svg {
-                                font-size: 11px;
-                                bottom: -30%;
+                                font-size: 15px;
+                                bottom: 85%;
                                 left: 2%;
                             }
                         }
@@ -332,10 +350,9 @@ BODY {
                             font-size: 10px;
                         }
                         .btnForm {
-                            height: 20px;
+                            padding: 5px;
                             width: 90px;
-                            font-size: 8px;
-                            margin-bottom: 5px;
+                            font-size: 10px;
                         }
                     }
                     .general_info {

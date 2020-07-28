@@ -13,7 +13,7 @@ function WeatherForm ({ getWeather }) {
             <form className='formWrapper' onSubmit={getWeather}>
                 <div className='formulario'>
                     <div className='formTitle'>
-                        <FontAwesomeIcon icon={faCloudSun} />
+                        {/*<FontAwesomeIcon icon={faCloudSun} />*/}
                         <div className='titleWeatherApp'>Buscar por región:</div>
                     </div>
                     <input type="text" name='city' placeholder='Inserta Ciudad...'
