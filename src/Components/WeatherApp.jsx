@@ -7,7 +7,7 @@ import '../Styles/WeatherApp.scss';
 
 
 function WeatherApp() {
-    //const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
     let getWeather = async e => {
         e.preventDefault()
@@ -20,14 +20,14 @@ function WeatherApp() {
         const data = await response.json();
         try { 
             if (data.main.temp) { 
-                alert(
+                /*alert(
                 `Clima en ${data.name}, ${data.sys.country} / temperatura: ${data.main.temp}°C / humedad: ${data.main.humidity}% / Viento: ${data.wind.speed}KPH`
-                )
+                )*/
+                dispatch({ type: 'SET_WEATHER_INFO', payload: data})
             }
         } catch (error) {
             alert('Debes ingresar Ciudad y País')
         }
-            //dispatch({ type: 'SET_WEATHER_INFO', payload: data})
     }
 
 

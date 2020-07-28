@@ -1,16 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import WeatherApp from './Components/WeatherApp';
-import { Route, Router } from 'react-router-dom';
-import Routes from './Routes'
+// import WeatherApp from './Components/WeatherApp';
+import { BrowserRouter } from 'react-router-dom';
+import store from './store/configStore';
+import Routes from './Routes';
 
-/*const Application = () => {
+const Application = () => {
   return (
-    <Router>
+    <Provider store={store} >
+      <BrowserRouter >
         <Routes />
-    </Router>
+      </BrowserRouter>
+    </ Provider>
   )
-}*/
+}
 
-ReactDOM.render( <WeatherApp />, document.getElementById('root'));
+ReactDOM.render( <Application />, document.getElementById('root'));
